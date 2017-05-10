@@ -1,8 +1,8 @@
-# Hubot Chatbot with Slack as an Adapter and APIs for restaurant, food nutrition facts, and location-based services.
+# PersonalDietBot
 
-A custom chatbot built with github's [hubot](https://hubot.github.com/). 
+A custom chatbot built with github's [hubot](https://hubot.github.com/). Uses Hubot Chatbot with Slack as an Adapter and APIs for restaurant, food nutrition facts, and location-based services.
 
-The bot's name is personaldietbot and is customized to integrate with APIs for restaurants and food nutrition. The bot will respond to the basic chatbot commands as detailed in:
+The bot's name is PersonalDietBot and is customized to integrate with APIs for restaurants and food nutrition. The bot will respond to the basic chatbot commands as detailed in:
 
 ```
 personaldietbot help
