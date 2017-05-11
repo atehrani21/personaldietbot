@@ -1,6 +1,6 @@
 {
   "name": "personaldietbot",
-  "version": "1.0",
+  "version": "1.0.0",
   "private": true,
   "author": "Andrew Tehrani <atehrani21@gmail.com>",
   "description": "A simple helpful robot that can help you plan your daily meals and suggest restaurants based on your caloric needs.",
@@ -10,6 +10,7 @@
     "hubot": "^2.19.0",
     "hubot-conversation": "^1.1.1",
     "hubot-diagnostics": "0.0.1",
+    "hubot-geocoder": "^1.0.1",
     "hubot-google-images": "^0.2.6",
     "hubot-google-translate": "^0.2.0",
     "hubot-help": "^0.2.0",
