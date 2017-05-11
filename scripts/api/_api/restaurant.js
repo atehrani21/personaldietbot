@@ -4,7 +4,8 @@ var needle = require('needle');
 module.exports = {
   /*
   * get restaurants nearest to the user's location. user provides address for now
-  * @param
+  * @param {Object} switchBoard
+  * @param {Object} msg
    */
   getRestaurant: function (switchBoard, msg) {
     var dialog = switchBoard.startDialog(msg);
@@ -12,10 +13,12 @@ module.exports = {
 
     dialog.addChoice(/(^)/i, function (msg2) {
       console.log(msg2.message.text);
+      // get user's message from msg2 object
       var addressToURL = msg2.message.text;
+      // replace "personaldietbot" prefix string and remove spaces for proper url encoding
       addressToURL = addressToURL.replace("personaldietbot ", "").replace(/\s/g, "+");
       console.log(addressToURL);
-      //get request for geocode (lat, lng)
+      // get request for geocode (lat, lng)
       needle.get("https://maps.googleapis.com/maps/api/geocode/json?address="+addressToURL+"&key="+config.google.key, function (err, resp) {
         console.log(resp.body.results[0].geometry.location.lat + ", " + resp.body.results[0].geometry.location.lng);
         var options = {
