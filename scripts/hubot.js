@@ -1,4 +1,5 @@
 var API = require('./api/api');
+var Conversation = require('hubot-conversation');
 
 module.exports = function(robot) {
   var playRegex = /play ([A-Za-z0-9\s]+)/i;
@@ -10,5 +11,11 @@ module.exports = function(robot) {
         msg.send(resp);
       }
     });
+  });
+
+  var switchBoard = new Conversation(robot);
+
+  robot.hear(/show me restaurants/, function (msg) {
+    API.restaurant.getRestaurant(switchBoard, msg);
   });
 };
